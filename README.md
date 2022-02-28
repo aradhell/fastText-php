@@ -1,6 +1,6 @@
 !! fork of https://github.com/YujiroTakahashi/fastText-php
 
-added pHP 8 support and fixed probability > 1 issue.
+added PHP 8 support and fixed probability > 1 issue.
 
 # fastText-php
 
