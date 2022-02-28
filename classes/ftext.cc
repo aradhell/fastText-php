@@ -388,7 +388,7 @@ PHP_METHOD(fasttext, getPredict)
     for (auto &node : result) {
         zval rowVal, probVal, labelVal;
         array_init(&rowVal);
-        ZVAL_DOUBLE(&probVal, std::exp(node.first));
+        ZVAL_DOUBLE(&probVal, node.first);
         ZVAL_STRING(&labelVal, node.second.c_str());
         zend_hash_str_add(Z_ARRVAL_P(&rowVal), "prob", sizeof("prob")-1, &probVal);
         zend_hash_str_add(Z_ARRVAL_P(&rowVal), "label", sizeof("label")-1, &labelVal);
