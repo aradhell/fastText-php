@@ -1,3 +1,7 @@
+!! fork of https://github.com/YujiroTakahashi/fastText-php
+
+added pHP 8 support and fixed probability > 1 issue.
+
 # fastText-php
 
 fastText-php is a PHP bindings for fastText.
@@ -6,26 +10,27 @@ fastText-php is a PHP bindings for fastText.
 
 ## Requirements
 
-PHP 7.x  
-fastText shard object  
+PHP 7+
+fastText shared object  
 
 ```
-$ curl -fSL "https://github.com/facebookresearch/fastText/archive/v0.9.1.tar.gz" -o "./fastText-0.9.1.tgz"
-$ tar xf fastText-0.9.1.tgz
-$ cd fastText-0.9.1
-$ mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release
-$ make -j $(nproc)
-$ sudo make install
+curl -fSL "https://github.com/facebookresearch/fastText/archive/v0.9.2.tar.gz" -o "./fastText-0.9.2.tgz"
+tar xf fastText-0.9.2.tgz
+cd fastText-0.9.2
+mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j $(nproc)
+sudo make install
+
 ```
 
 ## Building fastText for PHP
 
 ```
-$ cd fastText-php
-$ phpize
-$ ./configure
-$ make -j $(nproc)
-$ sudo make install
+cd fastText-php
+phpize
+./configure
+make -j $(nproc)
+sudo make install
 ```
 
 edit your php.ini and add:
